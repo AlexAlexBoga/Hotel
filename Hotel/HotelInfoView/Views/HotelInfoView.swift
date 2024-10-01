@@ -80,9 +80,7 @@ struct HotelInfoView: View {
                     .font(.system(size: 16))
                     .padding(.horizontal)
                     
-                    Button(action: {
-                        //
-                    }) {
+                    NavigationLink(destination: MainRoomsView()){
                         Text("Book Now")
                             .font(.headline)
                             .frame(maxWidth: .infinity)

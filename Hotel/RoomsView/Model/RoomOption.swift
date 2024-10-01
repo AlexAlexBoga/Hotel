@@ -12,3 +12,4 @@ struct RoomOption: Identifiable {
     let optinName: String
     let optionValue: String
 }
+
