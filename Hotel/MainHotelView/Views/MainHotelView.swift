@@ -22,38 +22,58 @@ struct MainHotelView: View {
                 }
                 .frame(maxWidth: .infinity)
                 
-                VStack {
-                    Text(hotel.hotelsDescription.headLine)
-                        .foregroundStyle(.backgroundBrown)
-                        .font(.system(size: 18, weight: .bold))
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 0)
-                    
-                    Text(hotel.hotelsDescription.description)
-                        .font(.system(size: 18, weight: .medium))
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 0)
-                    
-                    NavigationLink(destination: HotelInfoView()) {
-                        Text("Read more")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(.backgroundBrown)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .frame(width: 300)
-                    .padding(.bottom, 0)
-                }
+                DescriptionSectionView(headLine: hotel.hotelsDescription.headLineHotel,
+                                       description: hotel.hotelsDescription.description,
+                                       destination: AnyView(HotelInfoView())
+                )
                 
                 IconTextRowView()
                     .padding()
+                
+                VStack(spacing: 0) {
+                    Image(.room5)
+                        .resizable()
+                        .frame(height: 250)
+                        .scaledToFit()
+                        .clipped()
+                }
+                
+                DescriptionSectionView(headLine: hotel.hotelsDescription.headLineRomm,
+                                       description: hotel.hotelsDescription.descriptionRoom,
+                                       destination: AnyView(MainRoomsView())
+                )
+                
+                VStack(spacing: 0) {
+                    Image(.konf3)
+                        .resizable()
+                        .frame(height: 250)
+                        .scaledToFit()
+                        .clipped()
+                }
+                .padding(.top, 30)
+                
+                DescriptionSectionView(headLine: hotel.hotelsDescription.headLineConf,
+                                       description: hotel.hotelsDescription.descriptionConf,
+                                       destination: AnyView(MainRoomsView())
+                )
+                
+                VStack(spacing: 0) {
+                    Image(.rest1)
+                        .resizable()
+                        .frame(height: 250)
+                        .scaledToFit()
+                        .clipped()
+                }
+                .padding(.top, 30)
+                
+                DescriptionSectionView(headLine: hotel.hotelsDescription.headLineRest,
+                                       description: hotel.hotelsDescription.descriptionRest,
+                                       destination: AnyView(MainRoomsView())
+                )
+                
             }
             .edgesIgnoringSafeArea(.top)
         }
-       
     }
 }
 
