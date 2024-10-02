@@ -54,7 +54,7 @@ struct MainHotelView: View {
                 
                 DescriptionSectionView(headLine: hotel.hotelsDescription.headLineConf,
                                        description: hotel.hotelsDescription.descriptionConf,
-                                       destination: AnyView(MainRoomsView())
+                                       destination: AnyView(ConferenceView())
                 )
                 
                 VStack(spacing: 0) {
