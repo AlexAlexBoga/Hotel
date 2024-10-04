@@ -69,7 +69,6 @@ struct MainHotelView: View {
                                        description: hotel.hotelsDescription.descriptionRest,
                                        destination: AnyView(RestaurantView())
                 )
-                
             }
             .edgesIgnoringSafeArea(.top)
         }

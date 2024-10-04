@@ -12,7 +12,6 @@ struct DescriptionSectionView: View {
     let description: String
     let destination: AnyView
     
-    
     var body: some View {
         
         VStack {
