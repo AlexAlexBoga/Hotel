@@ -33,12 +33,10 @@ struct RoomItemView: View {
                     ForEach(item.options) { option in
                         RoomItemOption(optin: option)
                     }
-                  
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 18)
-            
         }
         .padding(.bottom, 26)
         .clipShape(RoundedRectangle(cornerRadius: 15))

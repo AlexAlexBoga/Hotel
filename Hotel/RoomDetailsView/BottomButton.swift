@@ -22,6 +22,5 @@ struct BottomButton: View {
                 .foregroundStyle(foregroundColor)
                 .clipShape(.rect(cornerRadius: 10))
         }
-
     }
 }
