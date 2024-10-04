@@ -1,4 +1,4 @@
-# 🏨 Hotel App SwiftUI
+# 🏨 Hotel App (SwiftUI)
 
 Hotel App is an application that allows users to explore detailed information about the hotel. With an intuitive interface, users can easily navigate through sections like rooms, conference halls, restaurants, and more.
 
