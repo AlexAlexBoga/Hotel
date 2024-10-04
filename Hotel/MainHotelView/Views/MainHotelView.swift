@@ -68,7 +68,7 @@ struct MainHotelView: View {
                 
                 DescriptionSectionView(headLine: hotel.hotelsDescription.headLineRest,
                                        description: hotel.hotelsDescription.descriptionRest,
-                                       destination: AnyView(MainRoomsView())
+                                       destination: AnyView(RestaurantView())
                 )
                 
             }
