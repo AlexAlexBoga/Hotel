@@ -27,7 +27,7 @@ struct PresentView: View {
                         .background(.backgroundBrown)
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 20)
                 }
             }
         }
