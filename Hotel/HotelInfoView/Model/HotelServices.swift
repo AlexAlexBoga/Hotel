@@ -11,7 +11,13 @@ struct HotelServices: Identifiable {
     let id = UUID()
     let services: [String]
     let images: [String]
-
+    let title: String
+    let description: String
+    let serviceDescription: String
+    let title2: String
+    let titleContact: String
+    let contactDescription: [String]
+    
     static func mockData() -> HotelServices {
         HotelServices(
             services: [
@@ -38,7 +44,21 @@ struct HotelServices: Identifiable {
                 "Restaurant is an excellent place for private diners, business meetings, banquets, etc.",
                 "3 modern conference halls"
             ],
-            images: ["image11", "image12", "image13"]
+            images: ["image11", "image12", "image13"],
+            
+            title: "GREAT LOCATION, AMIABLE SERVICE AND ALWAYS GOOD PRICE",
+            description: "City Gate hotel was newly renovated in 2017. At present, our hotel offers 53 comfortable up-to-date rooms, 3 conference halls, authentic restaurant, a stylish comfortable internal courtyard and free parking area.",
+            serviceDescription: "FEEL THE COMFORT AND COZINESS OF OUR HOTEL. WE ARE AT YOUR SERVICE:",
+            title2: "We are looking forward to welcoming you at the City Gate hotel!",
+            titleContact: "Contact Information",
+            contactDescription: [
+                "JSC City Gate, company code 110874198",
+                "Bazilijonų str. 3, LT-01304 Vilnius, Lithuania",
+                "Phone: (+370) 5 210 7306; (+370) 698 28833",
+                "Fax: (+370) 5 210 7307",
+                "E-mail: hotel@citygate.lt",
+                "Website: www.citygate.lt"
+            ]
         )
     }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainHotelView: View {
     @StateObject var hotel = MainHotelViewModel()
-    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -70,7 +69,6 @@ struct MainHotelView: View {
                                        description: hotel.hotelsDescription.descriptionRest,
                                        destination: AnyView(RestaurantView())
                 )
-                
             }
             .edgesIgnoringSafeArea(.top)
         }

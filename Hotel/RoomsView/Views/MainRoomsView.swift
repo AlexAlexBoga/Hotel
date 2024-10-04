@@ -15,7 +15,9 @@ struct MainRoomsView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("\(roomModel.roomItem.count) Available rooms")
+                    Text("\(roomModel.roomItem.count) Available room categories:")
+                        .font(.system(size: 18, weight: .black))
+                        .padding()
                     
                     VStack(spacing: 10) {
                         ForEach(roomModel.roomItem) { item in
@@ -26,7 +28,6 @@ struct MainRoomsView: View {
                                 RoomItemView(item: item)
                                     .tint(.black)
                             }
-
                         }
                     }
                 }
