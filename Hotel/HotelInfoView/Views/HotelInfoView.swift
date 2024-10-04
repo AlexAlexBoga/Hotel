@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HotelInfoView: View {
-    let services: HotelServices = HotelServices.mockData()
+    @StateObject var service = HotelInfoViewModel()
     
     var body: some View {
         NavigationStack {
@@ -17,26 +17,23 @@ struct HotelInfoView: View {
                     Image(.cgLogo)
                         .padding(.leading, 30)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        
                     
-                    Text("GREAT LOCATION, AMIABLE SERVICE AND ALWAYS GOOD PRICE")
+                    Text(service.hotelInfo.title)
                         .foregroundStyle(.backgroundBrown)
                         .font(.system(size: 18, weight: .bold))
                         .padding()
                         .multilineTextAlignment(.center)
-                    
-                    Text("City Gate hotel was newly renovated in 2017. At present, our hotel offers 53 comfortable up-to-date rooms, 3 conference halls, authentic restaurant, a stylish comfortable internal courtyard and free parking area.")
+                    Text(service.hotelInfo.description)
                         .font(.system(size: 18, weight: .medium))
                         .padding()
                         .multilineTextAlignment(.center)
-                    
-                    Text("FEEL THE COMFORT AND COZINESS OF OUR HOTEL. WE ARE AT YOUR SERVICE:")
+                    Text(service.hotelInfo.serviceDescription)
                         .foregroundStyle(.backgroundBrown)
                         .font(.system(size: 18, weight: .bold))
                         .padding()
                         .multilineTextAlignment(.center)
                     
-                    ForEach(services.services, id: \.self) { service in
+                    ForEach(service.hotelInfo.services , id: \.self) { service in
                         HStack(alignment: .top) {
                             Image(systemName: "checkmark")
                                 .foregroundColor(.backgroundBrown)
@@ -47,35 +44,28 @@ struct HotelInfoView: View {
                         }
                         .padding(.vertical, 2)
                         
-                        
                     }
-                    ForEach(services.images, id: \.self) { image in
+                    ForEach(service.hotelInfo.images, id: \.self) { image in
                         Image(image)
                             .resizable()
                             .scaledToFill()
                             .frame(height: 200)
                             .cornerRadius(10)
                     }
-                    
-                    Text("We are looking forward to welcoming you at the City Gate hotel!")
+                    Text(service.hotelInfo.title2)
                         .foregroundStyle(.backgroundBrown)
                         .font(.system(size: 18, weight: .bold))
                         .padding()
                         .multilineTextAlignment(.center)
-                    
-                    Text("Contact Information")
+                    Text(service.hotelInfo.titleContact)
                         .foregroundStyle(.backgroundBrown)
                         .font(.system(size: 18, weight: .bold))
                         .padding()
                         .multilineTextAlignment(.center)
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("JSC City Gate, company code 110874198")
-                        Text("Bazilijonų str. 3, LT-01304 Vilnius, Lithuania")
-                        Text("Phone: (+370) 5 210 7306; (+370) 698 28833")
-                        Text("Fax: (+370) 5 210 7307")
-                        Text("E-mail: hotel@citygate.lt")
-                        Text("Website: www.citygate.lt")
+                    ForEach(service.hotelInfo.contactDescription, id: \.self) { contact in
+                        Text(contact)
+                            .font(.body)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .font(.system(size: 16))
                     .padding(.horizontal)
@@ -95,7 +85,6 @@ struct HotelInfoView: View {
             }
             .scrollIndicators(.hidden)
         }
-        
     }
 }
 
