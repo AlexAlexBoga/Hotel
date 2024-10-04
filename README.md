@@ -20,3 +20,16 @@ Hotel App is an application that allows users to explore detailed information ab
 
 - 🛏️ **Room Booking by Dates**:
   - Users will be able to select available rooms based on their chosen dates.
+
+## 📸 Screenshots
+
+<div style="display: flex; justify-content: center;">
+    <div style="text-align: center; margin-right: 20px;">
+        <p>Main screen</p>
+        <img src="https://github.com/AlexAlexBoga/Hotel/raw/main/screenshots/main1.png" alt="Main screen" width="250" />
+    </div>
+    <div style="text-align: center;">
+        <p>Order screen</p>
+        <img src="https://github.com/AlexAlexBoga/hotel/raw/main/screenshots/detail1.png" alt="Order screen" width="250" />
+    </div>
+</div>
